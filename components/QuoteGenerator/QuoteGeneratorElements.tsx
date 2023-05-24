@@ -35,3 +35,19 @@ export const BackgroundImage2 = styled(Image)`
   bottom: 680px;
   transform: scaleX(-1);
 `;
+
+export const FooterCon = styled.div`
+  width: 100vw;
+  height: 50px;
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  font-size: 15px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  z-index: 999999l;
+`;
+
+export const FooterLink = styled(Link)`
+  color: white;
+`;
