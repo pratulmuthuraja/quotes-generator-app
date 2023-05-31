@@ -12,6 +12,12 @@ import {
   GradientBackgroundCon,
   FooterCon,
   FooterLink,
+  QuoteGeneratorCon,
+  QuoteGeneratorInnerCon,
+  QuoteGeneratorTitle,
+  QuoteGeneratorSubTitle,
+  GenerateQuoteButton,
+  GenerateQuoteButtonText,
 } from "@/components/QuoteGenerator/QuoteGeneratorElements";
 
 // Assets
@@ -33,17 +39,32 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        <GradientBackgroundCon></GradientBackgroundCon>
+      <GradientBackgroundCon></GradientBackgroundCon>
 
-        <BackgroundImage1 src={UncleIroh} height="300" alt="UncleIrohAvatar" />
+      <QuoteGeneratorCon>
+        <QuoteGeneratorInnerCon>
+          <QuoteGeneratorTitle>Chin Up King</QuoteGeneratorTitle>
+          <QuoteGeneratorSubTitle>
+            It is important to draw wisdom from many places{" "}
+            <FooterLink
+              href="https://zenquotes.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ZenQuotes API
+            </FooterLink>
+          </QuoteGeneratorSubTitle>
+          <GenerateQuoteButton>
+            <GenerateQuoteButtonText onClick={null}>
+              Inspire Me
+            </GenerateQuoteButtonText>
+          </GenerateQuoteButton>
+        </QuoteGeneratorInnerCon>
+      </QuoteGeneratorCon>
 
-        <BackgroundImage2
-          src={AvatarRoku}
-          height="300"
-          alt="AvatarRokuAvatar"
-        />
-      </div>
+      <BackgroundImage1 src={UncleIroh} height="300" alt="UncleIrohAvatar" />
+
+      <BackgroundImage2 src={AvatarRoku} height="300" alt="AvatarRokuAvatar" />
 
       <FooterCon>
         <>
@@ -59,8 +80,6 @@ export default function Home() {
           </FooterLink>
         </>
       </FooterCon>
-
-      <main className={styles.main}></main>
     </>
   );
 }
